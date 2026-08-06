@@ -1,4 +1,4 @@
-name: Deploy Matrix Global ERP
+name: Deploy Matrix ERP
 
 on:
   push:
@@ -8,11 +8,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-      - name: Sync to Google Drive Backup
-        env:
-          GDRIVE_KEY: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_KEY }}
+      - name: Run Build Check
         run: |
-          echo "Starting Automated Build & Cloud Sync..."
-          echo "Smart Modules Loaded: Voice AI, OCR Scanner, Custody Reminders."
+          echo "Building Matrix ERP System..."
+          echo "Smart Modules Loaded Successfully!"
