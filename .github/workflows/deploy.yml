@@ -1,15 +1,22 @@
+
 name: Deploy Matrix ERP
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "رئيسي" ]
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Run Build Check
-        run: echo "Building Matrix ERP System... Smart Modules Loaded!"
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: releases/v4
+          folder: .
+          clean: false
+          single-commit: true
