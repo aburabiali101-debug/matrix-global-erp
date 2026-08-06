@@ -2,7 +2,7 @@ name: Deploy Matrix ERP
 
 on:
   push:
-    branches: [ "main", "رئيسي" ]
+    branches: [ "main" ]
 
 jobs:
   build:
