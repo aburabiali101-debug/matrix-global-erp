@@ -12,6 +12,4 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run Build Check
-        run: |
-          echo "Building Matrix ERP System..."
-          echo "Smart Modules Loaded Successfully!"
+        run: echo "Building Matrix ERP System... Smart Modules Loaded!"
